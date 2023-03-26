@@ -1,0 +1,15 @@
+name: run Unity project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run executable file
+        run: |
+          SFMServer.exe
