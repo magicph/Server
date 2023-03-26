@@ -14,3 +14,10 @@ jobs:
         run: |
           cd Build
           ./SFMServer.exe
+      - name: Keep SFMServer running
+        run: |
+          while true
+          do
+            sleep 60
+            ps aux | grep SFMServer.exe | grep -v grep || ./Build/SFMServer.exe &
+          done
