@@ -10,12 +10,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install forever
-        run: npm install -g forever
       - name: Run executable file
         run: |
           cd Build
           ./SFMServer.exe
+      - name: Install forever
+        run: npm install -g forever
       - name: Keep SFMServer running
         run: |
           sleep 60
