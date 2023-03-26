@@ -10,10 +10,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Unity
-        uses: game-ci/setup-unity@v1
-        with:
-          unity-version: 2020.3.24f1
       - name: Run executable file
         run: |
           SFMServer.exe
